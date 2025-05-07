@@ -66,7 +66,7 @@
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings =  <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
 
             // 追加: スクロールのタップ時間を設定 (20ms)
 
@@ -79,10 +79,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W     &kp E         &kp R        &kp T                                           &kp Y        &kp U  &lt 5 I   &kp O     &kp P
-&kp A             &kp S     &kp D         &kp F        &kp G        &trans            &kp ESCAPE       &kp H        &kp J  &kp K     &kp L     &mkp MB4
-&mt LEFT_SHIFT Z  &kp X     &kp C         &kp V        &kp B        &kp LEFT_ALT      &kp RIGHT_SHIFT  &kp N        &kp M  &mkp MB1  &mkp MB2  &mkp MB5
-&kp LCTRL         &kp LCMD  &kp LEFT_ALT  &lt 1 ENTER  &lt 2 SPACE  &lt 3 TAB         &lt 4 BACKSPACE  &lt 5 LANG1                             &kp DELETE
+&kp Q             &kp W     &kp E         &kp R        &kp T                                        &kp Y        &kp U  &lt 5 I   &kp O     &kp P
+&kp A             &kp S     &kp D         &kp F        &kp G        &trans         &kp COMMA        &kp H        &kp J  &kp K     &kp L     &mt RIGHT_WIN ENTER
+&mt LEFT_SHIFT Z  &kp X     &kp C         &kp V        &kp B        &kp MINUS      &kp PERIOD       &kp N        &kp M  &mkp MB1  &mkp MB2  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LCMD  &kp LEFT_ALT  &lt 1 LANG1  &lt 2 SPACE  &lt 3 TAB      &lt 4 BACKSPACE  &lt 5 LANG2                             &mt RIGHT_CONTROL ESCAPE
             >;
 
             sensor-bindings = <&scroll_up_down>;
