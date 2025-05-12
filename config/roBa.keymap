@@ -4,7 +4,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
-
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
@@ -67,6 +66,7 @@
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
             tap-ms = <20>;
         };
     };
@@ -76,10 +76,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W     &kp E         &kp R        &kp T                                         &kp Y        &kp U  &lt 6 I   &kp O     &kp P
-&kp A             &kp S     &kp D         &kp F        &kp G        &kp ESCAPE      &kp COMMA        &kp H        &kp J  &kp K     &kp L     &mt RIGHT_WIN ENTER
-&mt LEFT_SHIFT Z  &kp X     &kp C         &kp V        &kp B        &kp MINUS       &kp PERIOD       &kp N        &kp M  &mkp MB1  &mkp MB2  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LCMD  &kp LEFT_ALT  &lt 1 LANG1  &lt 2 SPACE  &lt 3 TAB       &lt 4 BACKSPACE  &lt 5 LANG2                             &mt RIGHT_CONTROL ESCAPE
+&kp Q             &kp W     &kp E         &kp R        &kp T                                           &kp Y        &kp U  &lt 6 I    &kp O      &kp P
+&kp A             &kp S     &kp D         &kp F        &kp G        &kp CAPSLOCK      &mkp MB4         &kp H        &kp J  &kp K      &kp L      &mt RIGHT_WIN ENTER
+&mt LEFT_SHIFT Z  &kp X     &kp C         &kp V        &kp B        &kp MINUS         &mkp MB5         &kp N        &kp M  &mkp LCLK  &mkp RCLK  &mt RIGHT_SHIFT SLASH
+&kp LCTRL         &kp LCMD  &kp LEFT_ALT  &lt 1 LANG1  &lt 2 SPACE  &lt 3 TAB         &lt 4 BACKSPACE  &lt 5 LANG2                               &mt RIGHT_CONTROL ESCAPE
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -96,10 +96,10 @@
 
         Number {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp F4   &kp F5                          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_0  &trans
-&kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans      &kp EQUAL  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS         &kp MINUS
-&kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans      &trans     &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp ASTERISK     &kp SLASH
-&trans   &trans   &trans   &trans   &trans   &trans      &kp COMMA  &kp PERIOD                                                          &trans
+&kp F1   &kp F2   &kp F3   &kp F4   &kp F5                          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp N0        &trans
+&kp F6   &kp F7   &kp F8   &kp F9   &kp F10  &trans      &kp EQUAL  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PLUS      &kp MINUS
+&kp F11  &kp F12  &kp F13  &kp F14  &kp F15  &trans      &trans     &kp N7        &kp N8        &kp N9        &kp ASTERISK  &kp SLASH
+&trans   &trans   &trans   &trans   &trans   &trans      &kp COMMA  &kp PERIOD                                              &trans
             >;
         };
 
@@ -107,7 +107,7 @@
             bindings = <
 &kp LG(LEFT_ARROW)  &kp LS(LC(TAB))         &kp UP_ARROW          &kp LC(TAB)              &kp LG(RIGHT_ARROW)                             &kp LG(LEFT_ARROW)  &kp RS(RC(TAB))         &kp UP_ARROW         &kp RC(TAB)              &kp RG(RIGHT_ARROW)
 &kp HOME            &kp LEFT_ARROW          &kp DOWN_ARROW        &kp RIGHT_ARROW          &kp END              &trans      &kp PAGE_UP    &kp HOME            &kp LEFT_ARROW          &kp DOWN_ARROW       &kp RIGHT_ARROW          &kp END
-&kp LSHIFT          &kp LS(LG(LEFT_ARROW))  &kp RS(LEFT_CONTROL)  &kp LG(LS(RIGHT_ARROW))  &trans               &trans      &kp PAGE_DOWN  &trans              &kp RS(RG(LEFT_ARROW))  &kp RC(RIGHT_SHIFT)  &kp RG(RS(RIGHT_ARROW))  &trans
+&kp LSHIFT          &kp LG(LC(LEFT_ARROW))  &kp RS(LEFT_CONTROL)  &kp LG(LC(RIGHT_ARROW))  &trans               &trans      &kp PAGE_DOWN  &trans              &kp RG(RC(LEFT_ARROW))  &kp RC(RIGHT_SHIFT)  &kp RG(RC(RIGHT_ARROW))  &trans
 &trans              &trans                  &trans                &trans                   &trans               &trans      &trans         &kp RG(TAB)                                                                               &trans
             >;
 
