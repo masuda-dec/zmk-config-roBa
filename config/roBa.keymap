@@ -17,6 +17,12 @@
     combos { compatible = "zmk,combos"; };
 
     behaviors {
+        to_layer_0: to_layer_0 {
+            compatible = "zmk,behavior-to";
+            label = "TO_LAYER_0";
+            #binding-cells = <1>;
+        };
+
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
