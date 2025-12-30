@@ -23,14 +23,14 @@
             #binding-cells = <1>;
         };
 
-        lt_to_layer_0: lt_to_layer_0 {
+        /* lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-        };
+        }; */
 
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
@@ -75,10 +75,10 @@
 
         ARROW {
             bindings = <
-&kp LG(LEFT_ARROW)  &kp LS(LC(TAB))         &kp UP_ARROW          &kp LC(TAB)              &kp LG(RIGHT_ARROW)                             &kp LG(LEFT_ARROW)  &kp RS(RC(TAB))         &kp UP_ARROW         &kp RC(TAB)              &kp RG(RIGHT_ARROW)
-&kp HOME            &kp LEFT_ARROW          &kp DOWN_ARROW        &kp RIGHT_ARROW          &kp END              &trans      &kp PAGE_UP    &kp HOME            &kp LEFT_ARROW          &kp DOWN_ARROW       &kp RIGHT_ARROW          &kp END
-&kp LSHIFT          &kp LG(LC(LEFT_ARROW))  &kp RS(LEFT_CONTROL)  &kp LG(LC(RIGHT_ARROW))  &trans               &trans      &kp PAGE_DOWN  &trans              &kp RG(RC(LEFT_ARROW))  &kp RC(RIGHT_SHIFT)  &kp RG(RC(RIGHT_ARROW))  &trans
-&trans              &trans                  &trans                &trans                   &trans               &trans      &trans         &kp RG(TAB)                                                                               &trans
+&kp LG(LEFT_ARROW)  &kp LS(LC(TAB))         &kp UP_ARROW          &kp LC(TAB)              &kp LG(RIGHT_ARROW)                             &kp LG(LEFT_ARROW)  &kp RS(RC(TAB))         &kp UP_ARROW     [...]
+&kp HOME            &kp LEFT_ARROW          &kp DOWN_ARROW        &kp RIGHT_ARROW          &kp END              &trans      &kp PAGE_UP    &kp HOME            &kp LEFT_ARROW          &kp DOWN_ARROW   [...]
+&kp LSHIFT          &kp LG(LC(LEFT_ARROW))  &kp RS(LEFT_CONTROL)  &kp LG(LC(RIGHT_ARROW))  &trans               &trans      &kp PAGE_DOWN  &trans              &kp RG(RC(LEFT_ARROW))  &kp RC(RIGHT_SHIF[...]
+&trans              &trans                  &trans                &trans                   &trans               &trans      &trans         &kp RG(TAB)                                                  [...]
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
