@@ -24,7 +24,6 @@
     //         <&kp LEFT_ARROW>,
     //         <&kp UP_ARROW>,
     //         <&kp DOWN_ARROW>;
-
     //     tick = <10>;
     //     wait-ms = <5>;
     //     tap-ms = <5>;
@@ -75,10 +74,10 @@
 
         Symbol {
             bindings = <
-&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                      &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp GRAVE        &trans       &trans    &trans      &trans       &trans      &trans  &trans     &kp SEMICOLON  &kp SQT       &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&trans           &trans       &trans    &trans      &trans       &trans      &trans  &trans     &trans         &kp COMMA     &kp PERIOD            &kp BACKSLASH
-&trans           &trans       &trans    &trans      &trans       &trans      &trans  &trans                                                        &trans
+&kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                         &kp CARET  &kp AMPERSAND  &kp ASTERISK  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp GRAVE        &trans       &trans    &trans      &trans       &trans      &trans     &trans     &kp SEMICOLON  &kp SQT       &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&trans           &trans       &trans    &trans      &trans       &trans      &kp TILDE  &trans     &trans         &kp COMMA     &kp PERIOD            &kp BACKSLASH
+&trans           &trans       &trans    &trans      &trans       &trans      &trans     &trans                                                        &trans
             >;
         };
 
